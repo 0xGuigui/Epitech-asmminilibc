@@ -11,7 +11,7 @@ strlen:
 
 looping:
     cmp BYTE [rdi], 0   ; rdi == string, [] permet de déréférencer, 0 limite == '\0' (fin de chaine)
-    je ending              ; Si rdi == '\0' suite a son incrémentation, on execute la condition de fin car JE = Jump Equal et rdi = '\0'
+    je ending           ; Si rdi == '\0' suite a son incrémentation, on execute la condition de fin car JE = Jump Equal et rdi = '\0'
     inc rdi             ; Incrémentation de RDI pour avancer dans la string (voir plus bas)
     inc rcx             ; Increment RCX pour compter le nombre de fois qu'on fait la boucle (voir plus bas)
     jmp looping         ; Boucle tant que str[rcx] != \0 (voir plus bas)
